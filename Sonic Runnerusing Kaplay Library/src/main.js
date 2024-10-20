@@ -24,7 +24,7 @@ k.loadSprite("ring" , "graphics/ring.png", {
         sprin:{ from:0, to:15, loop: true, speed:30},
     },
 });
-k.loadSprite("motorbug", "graphics/motorbug.png",{
+k.loadSprite("motobug", "graphics/motobug.png",{
     sliceX: 5,
     sliceY: 1,
     anims: {
