@@ -1,6 +1,6 @@
 import k from "../kaplayCtx";
 import { makeSonic } from "../entities/sonic";
-// import { makeMotobug } from "../entities/motobug";
+import { makeMotobug } from "../entities/motobug";
 // import { makeRing } from "../entities/ring";
 
 export default function game() {
@@ -104,7 +104,7 @@ export default function game() {
     k.wait(waitTime, spawnMotoBug);
   };
 
-//   spawnMotoBug();
+  spawnMotoBug();
 
   const spawnRing = () => {
     const ring = makeRing(k.vec2(1950, 745));
