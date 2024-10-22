@@ -1,7 +1,7 @@
 import k from "../kaplayCtx";
 import { makeSonic } from "../entities/sonic";
 import { makeMotobug } from "../entities/motobug";
-// import { makeRing } from "../entities/ring";
+ import { makeRing } from "../entities/ring";
 
 export default function game() {
   //const citySfx = k.play("city", { volume: 0.2, loop: true });
@@ -121,7 +121,7 @@ export default function game() {
     k.wait(waitTime, spawnRing);
   };
 
-//   spawnRing();
+   spawnRing();
 
   k.add([
     k.rect(1920, 900),
