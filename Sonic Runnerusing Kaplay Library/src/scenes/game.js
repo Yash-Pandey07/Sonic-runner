@@ -4,7 +4,7 @@ import { makeMotobug } from "../entities/motobug";
  import { makeRing } from "../entities/ring";
 
 export default function game() {
-  //const citySfx = k.play("city", { volume: 0.2, loop: true });
+  const citySfx = k.play("city", { volume: 0.1, loop: true });
   k.setGravity(3100);
   const bgPieceWidth = 1920;
   const bgPieces = [
@@ -77,7 +77,7 @@ export default function game() {
 
     k.play("hurt", { volume: 0.5 });
     k.setData("current-score", score);
-    k.go("gameover");
+    k.go("gameover",citySfx);
   });
 
     let gameSpeed = 300;
@@ -133,7 +133,7 @@ export default function game() {
   ]);
 
   k.onUpdate(() => {
-    //if (sonic.isGrounded()) scoreMultiplier = 0;
+    if (sonic.isGrounded()) scoreMultiplier = 0;
 
     if (bgPieces[1].pos.x < 0) {
       bgPieces[0].moveTo(bgPieces[1].pos.x + bgPieceWidth * 2, 0);
